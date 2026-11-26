@@ -91,7 +91,75 @@ button { cursor: pointer; }
 .login-footnote { margin: 32px 0 0; text-align: center; color: #b2bdc1; font-size: 10px; }
 
 /* App shell */
-.app-screen { min-height: 100vh; background: var(--paper); }
+.app-screen { min-height: 100vh; background: #142235; --line: #0B6655; }
+#modal-root { --line: #0B6655; }
+
+/* Dashboard component borders: Dark Teal Emerald Green */
+.app-screen .card,
+.app-screen .card-header,
+.app-screen .topbar,
+.app-screen .table-wrap,
+.app-screen .toolbar,
+.app-screen .quick-action,
+.app-screen .counter-form,
+.app-screen .ticket-summary,
+.app-screen .search-box input,
+.app-screen .select-control,
+.app-screen .form-group input,
+.app-screen .form-group select,
+.app-screen .icon-action,
+.app-screen th,
+.app-screen td,
+.app-screen .occupancy-item { border-color: #0B6655 !important; }
+.app-screen .chart-grid span { border-top-color: #0B6655 !important; }
+.app-screen .card,
+.app-screen .kpi-card,
+.app-screen .table-wrap,
+.app-screen .counter-form,
+.app-screen .quick-action,
+.app-screen .toast { background: #CBD5DF !important; }
+.app-screen .topbar { background: #0a3f47 !important; color: #F4FAFA; border-color: #0B6655 !important; }
+.app-screen .topbar .breadcrumb { color: #B9D6D4; }
+.app-screen .topbar .breadcrumb b { color: #78AAA7; }
+.app-screen .topbar .breadcrumb strong { color: #FFFFFF; }
+.app-screen .topbar .date-chip { color: #B9D6D4; }
+.app-screen .topbar .date-chip span:first-child { color: #6BD1BC; }
+.app-screen .topbar .topbar-user strong { color: #FFFFFF; }
+.app-screen .topbar .topbar-user span { color: #B9D6D4; }
+.app-screen .topbar .icon-button,
+.app-screen .topbar .chevron-button,
+.app-screen .topbar .mobile-menu { color: #E4F5F2; }
+.app-screen .topbar .icon-button:hover,
+.app-screen .topbar .chevron-button:hover,
+.app-screen .topbar .mobile-menu:hover { color: #FFFFFF; background: rgba(107, 209, 188, .18); }
+.app-screen .card,
+.app-screen .counter-form,
+.app-screen .quick-action { color: #142235; }
+.app-screen .card h1,
+.app-screen .card h2,
+.app-screen .card h3,
+.app-screen .counter-form h2,
+.app-screen .counter-form h3,
+.app-screen .quick-action strong,
+.app-screen .primary-text { color: #0a3f47; }
+.app-screen .card p,
+.app-screen .card small,
+.app-screen .card-header p,
+.app-screen .kpi-label,
+.app-screen .kpi-meta,
+.app-screen .secondary-text,
+.app-screen td,
+.app-screen .quick-action { color: #334A59; }
+.app-screen .card label,
+.app-screen .counter-form label,
+.app-screen .form-group label { color: #142235; }
+.app-screen .card,
+.app-screen .counter-form,
+.app-screen .quick-action,
+.app-screen .table-wrap { background: linear-gradient(rgba(203, 213, 223, .78), rgba(203, 213, 223, .78)), url('latar-parkir-mall-biru-pastel.png') center / cover no-repeat !important; }
+.app-screen .kpi-card::after,
+.app-screen .welcome-banner::after,
+.app-screen .counter-form::before { display: none; }
 .sidebar { position: fixed; z-index: 20; top: 0; bottom: 0; left: 0; display: flex; flex-direction: column; width: 245px; padding: 25px 17px 21px; color: #a8c1c0; background: var(--navy-deep); }
 .sidebar-header { display: flex; align-items: center; justify-content: space-between; padding: 0 10px 26px; }
 .brand-lockup { display: flex; align-items: center; gap: 11px; color: var(--white); }
