@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ParkirKu - sistem loket dan manajemen parkir" />
+  <title>ParkirKu | Sistem Loket Parkir</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+  <section id="login-screen" class="login-screen">
+    <div class="login-art" aria-hidden="true">
+      <div class="art-grid"></div>
+      <div class="art-copy">
+        <div class="brand-mark brand-mark-light"><span>PK</span></div>
+        <p class="eyebrow">SISTEM MANAJEMEN PARKIR</p>
+        <h1>Loket yang rapi,<br /><em>parkir terkendali.</em></h1>
+        <p class="art-description">Kelola kendaraan, cetak tiket, dan pantau transaksi parkir dari satu tempat.</p>
+        <div class="art-stats">
+          <span><strong>3</strong><small>level akses</small></span>
+          <span><strong>24/7</strong><small>data tersimpan</small></span>
+          <span><strong>1 klik</strong><small>cetak tiket</small></span>
+        </div>
+      </div>
+      <div class="parking-illustration">
+        <div class="illustration-lamp"></div>
+        <div class="illustration-gate"></div>
+        <div class="illustration-line"></div>
+        <div class="illustration-car car-one"></div>
+        <div class="illustration-car car-two"></div>
+      </div>
+    </div>
+    <div class="login-panel">
+      <div class="mobile-brand">
+        <div class="brand-mark"><span>PK</span></div>
+        <span>ParkirKu</span>
+      </div>
+      <div class="login-heading">
+        <p class="eyebrow">SELAMAT DATANG KEMBALI</p>
+        <h2>Masuk ke sistem loket</h2>
+        <p>Login untuk mencatat kendaraan masuk dan memproses kendaraan keluar parkir.</p>
+      </div>
+      <form id="login-form" class="form-stack">
+        <label class="field-label" for="login-username">Username</label>
+        <div class="input-wrap">
+          <span class="input-icon">@</span>
+          <input id="login-username" name="username" type="text" autocomplete="username" placeholder="Masukkan username" required />
+        </div>
+        <label class="field-label" for="login-password">Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">••</span>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" required />
+          <button class="password-toggle" type="button" data-toggle-password aria-label="Tampilkan password">Lihat</button>
+        </div>
+        <button class="button button-primary button-full" type="submit">Masuk ke dashboard <span>→</span></button>
+      </form>
+      <div class="demo-account">
+        <div class="demo-title"><span class="status-dot"></span> Akun demo tersedia</div>
+        <div class="demo-grid">
+          <button type="button" data-demo-login="admin">Admin <strong>admin123</strong></button>
+          <button type="button" data-demo-login="petugas">Petugas <strong>petugas123</strong></button>
+          <button type="button" data-demo-login="owner">Owner <strong>owner123</strong></button>
+        </div>
+      </div>
+      <p class="login-footnote">Versi prototipe SPK • data demo tersimpan di browser ini</p>
+    </div>
+  </section>
+
+  <section id="app-screen" class="app-screen hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-lockup">
+          <div class="brand-mark"><span>PK</span></div>
+          <div><strong>ParkirKu</strong><small>Control center</small></div>
+        </div>
+        <button class="sidebar-close" type="button" data-close-sidebar aria-label="Tutup menu">×</button>
+      </div>
+      <div class="sidebar-profile">
+        <div class="avatar" id="sidebar-avatar">AS</div>
+        <div><strong id="sidebar-name">Admin Sistem</strong><span id="sidebar-role">Administrator</span></div>
+        <span class="online-dot" title="Online"></span>
+      </div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <p class="nav-caption">MENU UTAMA</p>
+        <button class="nav-item" data-view="dashboard"><span class="nav-icon">⌂</span><span>Ringkasan</span></button>
+        <button class="nav-item nav-highlight" data-view="loket"><span class="nav-icon">▣</span><span>Loket Tiket</span><b class="nav-live">LIVE</b></button>
+        <button class="nav-item" data-view="kendaraan"><span class="nav-icon">▱</span><span>Kendaraan</span></button>
+        <p class="nav-caption admin-only">PENGELOLAAN</p>
+        <button class="nav-item admin-only" data-view="tarif"><span class="nav-icon">◈</span><span>Tarif Parkir</span></button>
+        <button class="nav-item admin-only" data-view="area"><span class="nav-icon">▦</span><span>Area Parkir</span></button>
+        <button class="nav-item admin-only" data-view="users"><span class="nav-icon">♙</span><span>Pengguna</span></button>
+        <p class="nav-caption">LAPORAN</p>
+        <button class="nav-item owner-access" data-view="laporan"><span class="nav-icon">▤</span><span>Rekap Transaksi</span></button>
+        <button class="nav-item admin-access" data-view="aktivitas"><span class="nav-icon">◷</span><span>Log Aktivitas</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="help-card"><span class="help-icon">?</span><div><strong>Butuh bantuan?</strong><small>Lihat dokumentasi sistem</small></div><span>↗</span></div>
+        <button class="logout-link" type="button" data-logout><span>⇥</span> Keluar dari sistem</button>
+        <small class="version-label">ParkirKu v1.0 • SPK RPL</small>
+      </div>
+    </aside>
+
+    <div class="app-content">
+      <header class="topbar">
+        <button class="mobile-menu" type="button" data-open-sidebar aria-label="Buka menu">☰</button>
+        <div class="breadcrumb"><span>ParkirKu</span><b>/</b><strong id="breadcrumb-current">Ringkasan</strong></div>
+        <div class="topbar-actions">
+          <div class="date-chip"><span>◷</span><span id="current-date">22 Oktober 2026</span></div>
+          <button class="icon-button notification-button" type="button" title="Notifikasi" aria-label="Notifikasi"><span>♧</span><i></i></button>
+          <div class="topbar-user"><div class="avatar avatar-small" id="topbar-avatar">AS</div><div><strong id="topbar-name">Admin Sistem</strong><span id="topbar-role">Administrator</span></div></div>
+          <button class="chevron-button" type="button" data-logout aria-label="Keluar">⌄</button>
+        </div>
+      </header>
+      <main id="app-root" class="page-container"></main>
+    </div>
+  </section>
+
+  <div id="modal-root"></div>
+  <div id="print-surface" class="print-surface"></div>
+  <script src="app.js"></script>
+</body>
+</html>
